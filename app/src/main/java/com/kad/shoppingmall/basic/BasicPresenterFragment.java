@@ -1,12 +1,18 @@
 package com.kad.shoppingmall.basic;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kad.shoppingmall.App;
 import com.kad.shoppingmall.mvp.presenter.BasePresenter;
 import com.kad.shoppingmall.mvp.view.IView;
+
+import java.lang.ref.WeakReference;
 
 public abstract class BasicPresenterFragment<V extends IView,T extends BasePresenter<V>> extends BasicFragment {
 
@@ -20,6 +26,12 @@ public abstract class BasicPresenterFragment<V extends IView,T extends BasePrese
         presenter.onAttachView((V)this);
         return  view;
     }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
 
     public abstract T createPresenter();
 

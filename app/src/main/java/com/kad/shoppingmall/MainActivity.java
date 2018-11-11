@@ -11,10 +11,12 @@ import com.kad.inject.annotation.inner.BindView;
 import com.kad.inject.annotation.inner.ContentView;
 import com.kad.inject.annotation.OnCheckedChange;
 import com.kad.shoppingmall.basic.BasicActivity;
+import com.kad.shoppingmall.basic.BasicPresenterActivity;
 import com.kad.shoppingmall.fragment.CartFragment;
 import com.kad.shoppingmall.fragment.IndexFragment;
 import com.kad.shoppingmall.fragment.SortFragment;
 import com.kad.shoppingmall.fragment.UserFragment;
+import com.kad.shoppingmall.index.IndexView;
 
 import java.util.ArrayList;
 import java.util.List;
